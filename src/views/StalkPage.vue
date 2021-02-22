@@ -9,7 +9,7 @@
     </div>
     <ul>
       <div >
-      <li id ="list" v-for="profileSuggestion in profileSuggestions" :key="profileSuggestion.index" @click="viewUserDetails(profileSuggestion.login)" >
+      <li class ="list" v-for="profileSuggestion in profileSuggestions" :key="profileSuggestion.index" @click="viewUserDetails(profileSuggestion.login)" >
         <img alt="profile image" :src="profileSuggestion.avatar_url"/>
         {{profileSuggestion.login}}
 
@@ -51,19 +51,24 @@ export default {
 </script>
 
 <style scoped>
-#list{
+.list{
   padding: 10px;
   background-color: palegoldenrod;
   border: 2px solid darkgray;
   border-collapse: separate;
 }
+
+.list:hover {
+  background-color: cornflowerblue;
+}
+
 li{
   list-style-type: none;
 }
 #git{
   height: 500px;
-
 }
+
 
 img {
  height: 50px;
