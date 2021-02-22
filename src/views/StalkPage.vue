@@ -2,7 +2,7 @@
   <div>
     <img class="git" src="https://miro.medium.com/max/1400/1*WaaXnUvhvrswhBJSw4YTuQ.png">
     <div>
-    <input  v-model="username" type="text" placeholder="Enter github username" v-on:keyup="addProfileSuggestions" >
+    <input  v-model="username" type="text" placeholder="type github username" v-on:keyup="addProfileSuggestions" >
     </div>
     <ul>
       <div >
