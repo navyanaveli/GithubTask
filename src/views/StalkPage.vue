@@ -1,17 +1,15 @@
 <template>
   <div>
-    <img class="git" src="https://miro.medium.com/max/1400/1*WaaXnUvhvrswhBJSw4YTuQ.png">
+    <img alt="github logo" class="git" src="https://miro.medium.com/max/1400/1*WaaXnUvhvrswhBJSw4YTuQ.png">
     <div>
-    <input  v-model="username" type="text" placeholder="type github username" v-on:keyup="addProfileSuggestions" >
+    <input class="search" v-model="username" type="text" placeholder="Enter github username" v-on:keyup="addProfileSuggestions" >
     </div>
     <ul>
-      <div >
       <li class ="list" v-for="profileSuggestion in profileSuggestions" :key="profileSuggestion.index" @click="viewUserDetails(profileSuggestion.login)" >
         <img alt="profile image" :src="profileSuggestion.avatar_url"/>
         {{profileSuggestion.login}}
 
       </li>
-        </div>
     </ul>
   </div>
 </template>
@@ -53,19 +51,22 @@ export default {
   border: 2px solid darkgray;
   border-collapse: separate;
 }
-
 .list:hover {
   background-color: cornflowerblue;
 }
-
 li{
   list-style-type: none;
 }
 .git{
   height: 300px;
 }
-
-
+.search{
+  height: 30px;
+  width: 400px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 20px;
+}
 img {
  height: 50px;
 }
