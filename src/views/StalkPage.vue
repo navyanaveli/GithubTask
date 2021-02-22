@@ -1,6 +1,6 @@
 <template>
-  <div id="enter">
-    <img id="git" src="https://miro.medium.com/max/1400/1*WaaXnUvhvrswhBJSw4YTuQ.png">
+  <div>
+    <img class="git" src="https://miro.medium.com/max/1400/1*WaaXnUvhvrswhBJSw4YTuQ.png">
     <div>
     <input  v-model="username" type="text" placeholder="Enter github username" v-on:keyup="addProfileSuggestions" >
     <button @click="addProfileSuggestions">
@@ -18,7 +18,6 @@
     </ul>
   </div>
 </template>
-
 <script>
 import axios from 'axios'
 
@@ -65,8 +64,8 @@ export default {
 li{
   list-style-type: none;
 }
-#git{
-  height: 500px;
+.git{
+  height: 300px;
 }
 
 
